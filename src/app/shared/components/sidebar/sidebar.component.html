@@ -1,0 +1,76 @@
+
+<a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+    <i class="fa fa-bars"></i>
+</a>
+
+<!--Start sidebar  -->
+
+<nav id="sidebar" class="sidebar-wrapper" style="background-image: url('./assets/img/fondos/1.jpg') !important;">
+
+    <div class="sidebar-content">
+
+        <div class="sidebar-brand">
+            <a>Total casos confirmados</a>
+            <div id="close-sidebar">
+                <i class="fa fa-times"></i>
+            </div>
+        </div>
+
+        <!-- Start sidebar-header  -->
+        <div class="sidebar-header">
+
+            <h3> {{ title }} </h3><br>
+
+            <h2 class="total_casos">{{ _service._total }}</h2><br>
+
+            <div class="data-info">
+                <span class="data-status">
+                    <i class="fa fa-circle"></i>
+                    <span>Casos recuperados</span>
+                    <p class="total_item"> {{ _service._tl_recuperados }} </p>
+                </span>
+                <span class="data-status">
+                    <i class="fa fa-circle"></i>
+                    <span>Casos mortales</span>
+                    <p class="total_item"> {{ _service._tl_mortales }} </p>
+                </span>
+                <span class="data-status">
+                    <i class="fa fa-clock-o"></i>
+                    <span>Actualizado hace </span>
+                    <p class="total_item"> {{ _service._tl_min }} min </p>
+                </span>
+            </div>
+        </div>
+        <!--End sidebar-header  -->
+
+        <!--Start sidebar-search  -->
+        <div class="sidebar-search">
+            <div>
+
+                <select id="search_locations" class="form-control" name="locations[]" multiple="multiple" (change)="changeField()">
+                    <option *ngFor="let estado of _service._options_location" [value]="estado.location">
+                        {{ estado.location }}
+                    </option>
+                </select>
+
+            </div>
+        </div>
+        <!-- End sidebar-search  -->
+
+
+    </div>
+
+    <!-- sidebar-content  -->
+    <div class="sidebar-footer">
+        <a href="" title="Limpiar filtros" (click)="clickField()">
+            <i class="fa fa-refresh"></i>
+        </a>
+        <a href="https://gallerydinamic.web.app/hv" target="_blank" title="Ver perfil">
+            <i class="fa fa-user"></i>
+            <span class="badge badge-pill badge-warning notification">1</span>
+        </a>
+    </div>
+    
+</nav>
+
+<!--End sidebar  -->

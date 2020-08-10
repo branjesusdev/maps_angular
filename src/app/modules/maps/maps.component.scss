@@ -1,0 +1,65 @@
+@import "../../../styles";
+
+/*--------------------maps - content----------------------*/
+
+app-root, agm-map {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+.content-info div{
+    margin: 5px 0;
+    width: 150px;
+
+    &:nth-child(1){
+        color: $primary;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+
+    }
+
+    &:nth-child(2){
+        color: $danger;
+        font-size: 14px;
+        font-weight: 400;
+
+        .info_item{
+            padding-left: 30px;
+        }
+    }
+
+    &:nth-child(3){
+        hr{
+            width: 100%;
+            height: 2px;
+            background: $gray-400;
+            margin: 8px 0;
+        }
+    }
+
+    &:nth-child(4){
+        font-weight: 400;
+        color: $gray-900;
+        .fa{
+            color: $success;
+        }
+        .info_item{
+            margin-left: 20px;
+        }
+    }
+
+    &:nth-child(5){
+        font-weight: 400;
+        color: $gray-900;
+        .fa{
+            color: $danger;
+        }
+        .info_item{
+            margin-left: 35px;
+        }
+    }
+    
+}

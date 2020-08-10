@@ -1,0 +1,68 @@
+<!-- Start page-content" -->
+<main class="page-content">
+    <div class="">
+        <hr>
+        <div class="row">
+            <div class="form-group col-md-12">
+
+                <agm-map [latitude]="this._service._lat" [longitude]="this._service._lng" [zoom]="_service._zoom"
+                    [width]="100" [height]="100">
+
+                    <agm-marker *ngFor="let location of _service._markers" [latitude]="location.latitude"
+                        [longitude]="location.longitude" [iconUrl]="icon" [markerClickable]="true"
+                        (markerClick)="markerClicked($event, location)" 
+                        (mouseOver)="onMouseOver(infoWindow, $event, location)"
+                        (mouseOut)="onMouseOut(infoWindow, $event)">
+
+                        <agm-info-window [disableAutoPan]="false" #infoWindow>
+
+                            <div class="content-info">
+
+                                <div class="info-status">
+                                    <span>{{ location.location }} </span>
+                                </div>
+
+                                <div class="info-status row">
+                                    <span class="col-xs-6">Total casos </span>
+                                    <p class="info_item col-xs-6"> {{ location.confirmed }} </p>
+                                </div>
+
+                                <div>
+                                    <hr>
+                                </div>
+
+                                <div class="info-status row">
+                                    <i class="fa fa-circle col-xs-2"></i>
+                                    <span class="col-xs-5">&nbsp; Recuperados </span>
+                                    <p class="info_item col-xs-5"> {{ location.recovered }} </p>
+                                </div>
+
+                                <div class="info-status row">
+                                    <i class="fa fa-circle col-xs-2"></i>
+                                    <span class="col-xs-5">&nbsp; Fallecidos</span>
+                                    <p class="info_item col-xs-5"> {{ location.dead }} </p>
+                                </div>
+
+                            </div>
+                        </agm-info-window>
+
+                    </agm-marker>
+
+                    <agm-data-layer [geoJson]="_service._polygon" (layerClick)="layerClicked($event)" [style]="styleFunc">
+
+                    </agm-data-layer>
+
+                </agm-map>
+
+            </div>
+        </div>
+
+    </div>
+
+</main>
+<!--End page-content" -->
+
+
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+    <h4 style="color: white">{{mensajeLoading}}</h4>
+</ngx-spinner>

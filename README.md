@@ -1,27 +1,41 @@
-# Maps
+## Clonar proyecto 
+rama default master:
+    git clone https://github.com/branfon1/maps_angular.git
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
+## Ejecución del proyecto 
+Guias de instalación Angular    `src/assets/docs/INSTALACIÓN ANGULAR.pdf`
+npm install                     `instalar modules`
+ng serve --port 4300 --o        `Ejecución del proyecto, Opcional: '--port 4300'`
 
-## Development server
+## Plugins instalados 
+Bootstrap                       
+JQuery                          
+Font-awesome               `Icons`
+Select2                    `Filtros`
+Moment                     `Formatear fechas`
+Accounting                 `Formatear numeros`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## app
+layouts/default            `PRINCIPAL: Definicón de módulos [import, declarations, providers]`
+modules/                   `Vistas`
+modules/maps               `Contenedor principal, vistas de los mapas`
+services/default           `[ metodos globales, servicios api rest, variables globales ] `
+shared                     `Se exportan los partials [header/footer/sidebar] al module default`
+shared/components          `Definición Partials: Vistas [header/footer/sidebar] `
+shared/components/sidebar  `[Total, Filtros, acciones]`
 
-## Code scaffolding
+## assets
+docs          `Guias`     
+img           `Imagenes públicas [fondos, icon maps] `   
+Library       `Recursos secundarios`      
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## environments
+config.ts           `Archivo principal de toda la configuracón: ` 
+                    `[Api_key, mensajes, complementos de servicios, posición defaults] `  
+environment.ts      `Url's de las API [trackcorona, shape.geojson] `       
 
-## Build
+## styles 
+styles.scss       `Estandares, colores`  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## guia del proyecto 
+Guia        `src/assets/docs/GUIA.pdf`
