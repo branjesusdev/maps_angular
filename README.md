@@ -4,7 +4,7 @@ rama default master:
 
 ## Ejecución del proyecto 
 Guias de instalación Angular    `src/assets/docs/INSTALACIÓN ANGULAR.pdf`
-npm install                     `instalar modules`
+npm install                     `instalar node_modules`
 ng serve --port 4300 --o        `Ejecución del proyecto, Opcional: '--port 4300'`
 
 ## Plugins instalados 
@@ -14,6 +14,14 @@ Font-awesome               `Icons`
 Select2                    `Filtros`
 Moment                     `Formatear fechas`
 Accounting                 `Formatear numeros`
+
+## Uso de módulos de Angular
+@angular/router 
+@angular/http
+ngx-spinner
+@angular/google-maps
+@angular/forms
+@angular/platform-browser-dynamic
 
 ## app
 layouts/default            `PRINCIPAL: Definicón de módulos [import, declarations, providers]`

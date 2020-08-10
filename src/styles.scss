@@ -172,18 +172,8 @@ $dark: $gray-800 !default;
   }
 }
 
-.chiller-theme .sidebar-wrapper .sidebar-search{
-  input.search-menu, .input-group-text {
-    border-color: transparent;
-    box-shadow: none;
-    padding: 2px 5px;
-  }
-}
-
 .chiller-theme .sidebar-wrapper .sidebar-header .data-info .data-role,
 .chiller-theme .sidebar-wrapper .sidebar-header .data-info .data-status,
-.chiller-theme .sidebar-wrapper .sidebar-search input.search-menu,
-.chiller-theme .sidebar-wrapper .sidebar-search .input-group-text,
 .chiller-theme .sidebar-wrapper .sidebar-brand > a,
 .chiller-theme .sidebar-wrapper .sidebar-menu ul li a,
 .chiller-theme .sidebar-footer > a {
@@ -207,9 +197,7 @@ $dark: $gray-800 !default;
 }
 
 .chiller-theme .sidebar-wrapper .sidebar-menu ul li a i,
-.chiller-theme .sidebar-wrapper .sidebar-menu .sidebar-dropdown div,
-.chiller-theme .sidebar-wrapper .sidebar-search input.search-menu,
-.chiller-theme .sidebar-wrapper .sidebar-search .input-group-text {
+.chiller-theme .sidebar-wrapper .sidebar-menu .sidebar-dropdown div {
   background: $white;
 }
 
